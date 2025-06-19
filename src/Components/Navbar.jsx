@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
+import ProjectLogo from './projectLogo';
 
 const Navbar = () => {
   const navLinks=<>
@@ -22,11 +23,11 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu gap-4 menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
        {navLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-black"><ProjectLogo></ProjectLogo></a>
   </div>
   <div className="navbar-center justify-around  hidden lg:flex">
    <ul className='menu menu-horizontal gap-8 px-1'>
