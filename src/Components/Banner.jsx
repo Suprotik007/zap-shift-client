@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Banner = () => {
     return (
         <div>
-            <Carousel>
+            <Carousel infiniteLoop={true} >
                 <div>
                     <img src={img1}/>
              
