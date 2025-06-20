@@ -12,9 +12,9 @@ const Login = () => {
     }
 
     return (
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card  w-full max-w-sm shrink-0 ">
             <div className="card-body">
-                <h1 className="text-5xl font-bold">Please Login</h1>
+                <h1 className="text-5xl font-bold"> Login</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <fieldset className="fieldset">
 
@@ -42,9 +42,9 @@ const Login = () => {
 
                         <div><a className="link link-hover">Forgot password?</a></div>
 
-                        <button className="btn btn-primary text-black mt-4">Login</button>
+                        <button className="btn bg-[#CAEB66] text-black mt-4">Login</button>
                     </fieldset>
-                    <p><small>New to this website? <Link className="btn btn-link" to="/register">Register</Link></small></p>
+                    <p><small>New to this website? <Link className="btn text-[#CAEB66] btn-link" to="/register  ">Register</Link></small></p>
                 </form>
                 <SocialLogin></SocialLogin>
             </div>

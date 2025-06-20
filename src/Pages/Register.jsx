@@ -21,9 +21,10 @@ const Register = () => {
 
     return (
 
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card  w-full max-w-sm shrink-0 ">
+            <h1 className="text-5xl font-bold">Create An Account</h1>
             <div className="card-body">
-                <h1 className="text-5xl font-bold">Create Account</h1>
+                
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <fieldset className="fieldset">
                         {/* email field */}
@@ -45,9 +46,9 @@ const Register = () => {
                         }
 
                         <div><a className="link link-hover">Forgot password?</a></div>
-                        <button className="btn btn-primary text-black mt-4">Register</button>
+                        <button className="btn bg-[#CAEB66]  text-black mt-4">Register</button>
                     </fieldset>
-                    <p><small>Already have an account? <Link className="btn btn-link" to="/login">Login</Link></small></p>
+                    <p><small>Already have an account? <Link className="btn btn-link text-[#CAEB66] " to="/login">Login</Link></small></p>
                 </form>
                 <SocialLogin></SocialLogin>
             </div>
