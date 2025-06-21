@@ -1,9 +1,10 @@
 import React from 'react';
+import useAuth from '../Contexts/useAuth';
 // import useAuth from '../../../hooks/useAuth';
 
 const SocialLogin = () => {
 
-    // const { signInWithGoogle } = useAuth();
+    const { signInWithGoogle } = useAuth();
 
     const handleGoogleSignIn = () => {
         signInWithGoogle()
