@@ -3,10 +3,11 @@ import { useForm } from 'react-hook-form';
 // import useAuth from '../../../hooks/useAuth';
 import { Link } from 'react-router';
 import SocialLogin from '../Pages/SocialLogin';
+import useAuth from '../Contexts/useAuth';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    // const { createUser } = useAuth();
+    const { createUser } = useAuth();
 
     const onSubmit = data => {
         console.log(data);
