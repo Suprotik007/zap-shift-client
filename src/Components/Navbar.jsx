@@ -4,15 +4,13 @@ import ProjectLogo from './projectLogo';
 
 const Navbar = () => {
   const navLinks=<>
-  <NavLink>Services</NavLink>
+  <NavLink to='/'>Home</NavLink>
+  <NavLink to='sendParcel'>Send A Parcel</NavLink>
   <NavLink to='/coverage'>Coverage</NavLink>
   <NavLink>About Us</NavLink>
-  <NavLink>Pricing</NavLink>
-  <NavLink>Be a Rider</NavLink>
+  
   </>
 
-
-  
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">

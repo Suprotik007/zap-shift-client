@@ -42,7 +42,7 @@ const BangladeshMap = ({ serviceCenters }) => {
 
             <form
                 onSubmit={handleSearch}
-                className="absolute top-4 left-1/2 transform -translate-x-1/2 z-[1000] w-full max-w-md px-4 flex bg-gray-400"
+                className="absolute top-4 left-1/2 transform -translate-x-1/2 z-[1000] w-full max-w-md px-4 flex bg-gray-200"
             >
                 <input
                     type="text"
@@ -53,8 +53,8 @@ const BangladeshMap = ({ serviceCenters }) => {
                 />
                 <button
                     type="submit"
-                    className="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700"
-                >
+                    className="btn btn-neutral text-white px-4 py-2 rounded-r-md hover:bg-blue-700" 
+                > 
                     Go
                 </button>
             </form>
