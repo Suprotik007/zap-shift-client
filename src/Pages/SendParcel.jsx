@@ -23,18 +23,27 @@ const SendParcel = () => {
     const axiosSecure = useAxiosSecure();
 
     const serviceCenters = useLoaderData();
-//    console.log(Array.isArray(serviceCenters)); // Should print true
+   
 
 
     
     // Extract unique regions
-    const uniqueRegions = [...new Set(Object.values(serviceCenters).map(w => w.region))];
+    // const uniqueRegions = [...new Set(Object.values(serviceCenters).map(w => w.region))];
+       const uniqueRegions = [...new Set(serviceCenters.map((w) => w.region))];
+//   console.log(uniqueRegions);
+  
+    
 
     // Get districts by region
-  const getDistrictsByRegion = (region) =>
-  Array.isArray(serviceCenters)
-    ? serviceCenters.filter(w => w.region === region).map(w => w.district)
-    : [];
+//   const getDistrictsByRegion = (region) =>
+//   Array.isArray(serviceCenters)
+//     ? serviceCenters.filter(w => w.region === region).map(w => w.district)
+//     : [];
+
+   const getDistrictsByRegion = (region) =>
+        serviceCenters.filter((w) => w.region === region).map((w) => w.district);
+
+console.log(getDistrictsByRegion);
 
 
     const parcelType = watch("type");
@@ -207,7 +216,7 @@ const SendParcel = () => {
                             <input {...register("sender_contact", { required: true })} className="input input-bordered w-full" placeholder="Contact" />
                             <select {...register("sender_region", { required: true })} className="select select-bordered w-full">
                                 <option value="">Select Region</option>
-                                <option value="">dhaka</option>
+                               
                                 {uniqueRegions.map((region) => (
                                     <option key={region} value={region}>{region}</option>
                                 ))}
