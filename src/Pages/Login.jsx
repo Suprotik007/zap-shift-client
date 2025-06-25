@@ -44,7 +44,7 @@ const Login = () => {
 
                         <button className="btn bg-[#CAEB66] text-black mt-4">Login</button>
                     </fieldset>
-                    <p><small>New to this website? <Link className="btn text-[#CAEB66] btn-link" to="/register  ">Register</Link></small></p>
+                    <p><small>New to this website? <Link className="btn text-[#CAEB66] btn-link" to="/register">Register</Link></small></p>
                 </form>
                 <SocialLogin></SocialLogin>
             </div>

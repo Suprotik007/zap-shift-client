@@ -41,7 +41,7 @@ const DashboardLayout = () => {
                 <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4"> 
                     {/* Sidebar content here */}
                    <ProjectLogo></ProjectLogo>
-                    <li><a>Home</a></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
                     <li><NavLink to="/dashboard/myParcels">My Parcels</NavLink></li>
                 </ul>
             </div>

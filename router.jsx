@@ -8,6 +8,7 @@ import Coverage from "./src/Pages/Coverage";
 import SendParcel from "./src/Pages/SendParcel";
 import MyParcels from "./src/Pages/DashBoard/MyParcels";
 import DashboardLayout from "./src/Layouts/DashboardLayout";
+import Payment from "./src/Pages/DashBoard/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -35,11 +36,11 @@ export const router = createBrowserRouter([
     Component:AuthLayout,
     children:[
       {
-path:'login',
+path:'/login',
 Component:Login
       },
       {
-path:'register',
+path:'/register',
 Component:Register
       },
     ]
@@ -52,6 +53,10 @@ Component:Register
       {
         path: 'myParcels',
         Component: MyParcels
+      },
+      {
+        path:'payment:id',
+        Component: Payment
       }
     ]
   }
