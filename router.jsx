@@ -55,7 +55,7 @@ Component:Register
         Component: MyParcels
       },
       {
-        path:'payment:id',
+        path:'payment/:parcelId',
         Component: Payment
       }
     ]

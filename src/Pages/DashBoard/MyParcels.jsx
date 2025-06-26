@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-
+// import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 import useAuth from '../../Contexts/useAuth';
 import useAxiosSecure from '../../Contexts/useAxiosSecure';
+import {  useNavigate } from 'react-router';
 
 const MyParcels = () => {
     const { user } = useAuth();
@@ -23,10 +24,12 @@ const MyParcels = () => {
         console.log("View parcel", id);
         // You could open a modal or navigate to a detail page
     };
-
-    const handlePay = (id) => {
-        console.log("Proceed to payment for", id);
-        // Implement your payment logic
+let navigate = useNavigate();
+   const handlePay = (id) => {
+    
+        // console.log("Proceed to payment for", id);
+        navigate(`/dashboard/payment/${id}`)
+        // navigate(`./Payment/Payment.jsx/${id}`)
     };
 
     const handleDelete = async (id) => {

@@ -2,10 +2,10 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
-
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../Contexts/useAxiosSecure';
 import useAuth from '../../../Contexts/useAuth';
+
 
 const PaymentForm = () => {
     const stripe = useStripe();
@@ -16,7 +16,6 @@ const PaymentForm = () => {
     const navigate = useNavigate();
 
     const [error, setError] = useState('');
-
 
     const { isPending, data: parcelInfo = {} } = useQuery({
         queryKey: ['parcels', parcelId],
@@ -31,12 +30,15 @@ const PaymentForm = () => {
     }
 
     console.log(parcelInfo)
+
     const amount = parcelInfo.cost;
     const amountInCents = amount * 100;
     console.log(amountInCents);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('nice try');
+        
         if (!stripe || !elements) {
             return;
         }
@@ -113,10 +115,6 @@ const PaymentForm = () => {
                 }
             }
         }
-
-
-
-
 
     }
 
