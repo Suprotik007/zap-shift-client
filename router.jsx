@@ -9,6 +9,9 @@ import SendParcel from "./src/Pages/SendParcel";
 import MyParcels from "./src/Pages/DashBoard/MyParcels";
 import DashboardLayout from "./src/Layouts/DashboardLayout";
 import Payment from "./src/Pages/DashBoard/Payment/Payment";
+import PaymentHistory from "./src/Pages/DashBoard/Payment/PaymentHistory/PaymentHistory";
+import TrackParcel from "./src/Pages/TrackParcel/TrackParcel";
+import BeARider from "./src/Pages/DashBoard/BeARider";
 
 export const router = createBrowserRouter([
   {
@@ -23,14 +26,19 @@ export const router = createBrowserRouter([
     Component:Coverage,
     loader:()=>  fetch('./public/serviceCenter.json.json'),
   },
+     {
+        path: '/beARider',
+        // element: <PrivateRoute,><BeARider></BeARider>,
+        Component: BeARider,
+        loader: () => fetch('./public/serviceCenter.json.json')
+      },
 {
     path:'/sendParcel',
     Component:SendParcel,
     loader: () => fetch('./public/serviceCenter.json.json')
    
   },
-]
-  },
+]},
   {
     path:'/',
     Component:AuthLayout,
@@ -57,6 +65,14 @@ Component:Register
       {
         path:'payment/:parcelId',
         Component: Payment
+      },
+       {
+        path: 'paymentHistory',
+        Component: PaymentHistory
+      },
+      {
+        path: 'track',
+        Component: TrackParcel
       }
     ]
   }
